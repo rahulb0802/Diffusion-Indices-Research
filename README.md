@@ -3,10 +3,10 @@
 
 This project implements a framework for forecasting U.S. economic recessions using **diffusion indices** derived from macroeconomic data, combined with **tree-based ensemble machine learning models**. The methodology aligns with the research presented in the paper _“Diffusion Indices for Economic Recession Forecasting using Tree-Based Ensemble Methods”_.
 
-## 📌 Project Highlights
+## Project Highlights
 
 - Uses macroeconomic data from the [FRED-MD](https://research.stlouisfed.org/econ/mccracken/fred-databases/) database
-- Constructs **Category-Based** and **Factor-Based Diffusion Indices (CBDI, FBDI)**
+- Constructs novel **Category-Based** and **Factor-Based Diffusion Indices (CBDI, FBDI)**
 - Compares performance against traditional benchmarks (e.g., yield curve spread, PCA-based factors, full variable set)
 - Forecasts recessions using:
   - Logistic Regression (L1, L2)
@@ -16,41 +16,8 @@ This project implements a framework for forecasting U.S. economic recessions usi
 - Implements **expanding-window out-of-sample recursive forecasting**
 - Evaluates models using **PR AUC, precision, recall, F1-score**, and **confusion matrices**
 
-## 🗂️ Repository Structure
 
-```
-├── main.ipynb                # Jupyter notebook with full implementation
-├── Final Academic Paper.pdf  # Research paper explaining methodology and results
-├── README.md                 # Project overview and documentation (this file)
-```
-
-## ⚙️ Setup Instructions
-
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/yourusername/recession-forecasting.git
-   cd recession-forecasting
-   ```
-
-2. **Install Required Packages**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-   ### Requirements (partial list):
-   - `pandas`
-   - `numpy`
-   - `scikit-learn`
-   - `xgboost`
-   - `matplotlib`
-   - `seaborn`
-   - `fredapi`
-   - `statsmodels`
-
-3. **Run the Notebook**
-   Open `main.ipynb` and run all cells to reproduce the experiments.
-
-## 🧠 Methodology
+## Methodology
 
 ### Data:
 - **Source:** [FRED-MD](https://research.stlouisfed.org/econ/mccracken/fred-databases/)
@@ -81,18 +48,17 @@ This project implements a framework for forecasting U.S. economic recessions usi
 ## 📊 Key Results
 
 - **Tree-based models significantly outperform Logistic Regression**.
-- **CBDI + Tree-Based Models** yield PR AUC > 0.90 for 3-month forecasts.
-- Diffusion indices outperform the **yield spread**, a traditional benchmark.
+- **CBDI + Tree-Based Models** yield PR AUC > 0.90 for 3-month forecasts, outperforming **full FRED-MD dataset**.
+- All diffusion indices outperform the **yield spread**, a traditional benchmark.
 - On a 6-month horizon, the **full FRED-MD dataset** performs best, but CBDI remains competitive.
 
-## 📌 Insights
+##  Insights
 
-- Tree-based methods are highly effective for capturing nonlinear recession predictors.
-- CBDIs, which aggregate macroeconomic sector trends, are powerful yet interpretable.
+- CBDIs, which aggregate macroeconomic sector trends, are powerful yet very interpretable.
 - Diffusion indices allow policymakers to trace economic risks to specific sectors.
 - Tree-based models paired with CBDIs provide an ideal balance between **performance and interpretability**.
 
-## 📚 References
+## References
 
 Key references include:
 
@@ -102,15 +68,5 @@ Key references include:
 - Chen & Guestrin (2016) – XGBoost
 - Gu et al. (2020) – Machine learning in economics
 
-A full bibliography is included in the accompanying PDF.
-
-## 📌 Future Improvements
-
-- Real-time data versions instead of revised data
-- Quarterly datasets (e.g., using FRED-QD)
-- More exhaustive hyperparameter tuning
-- Exploring dynamic factor models or neural networks for FBDI
-
 ## 📬 Contact
-
-For questions or collaboration requests, please reach out via [your email/contact info].
+For questions or to view the paper, please reach out to rahulsai.billakanti11@gmail.com.
