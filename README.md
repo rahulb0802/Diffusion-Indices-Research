@@ -45,7 +45,7 @@ This project implements a framework for forecasting U.S. economic recessions usi
 - Hyperparameter tuning using `RandomizedSearchCV`
 - Evaluation metrics: PR AUC, F1-score, recall, precision, confusion matrix
 
-## 📊 Key Results
+## Key Results
 
 - **Tree-based models significantly outperform Logistic Regression**.
 - **CBDI + Tree-Based Models** yield PR AUC > 0.90 for 3-month forecasts, outperforming **full FRED-MD dataset**.
